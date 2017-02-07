@@ -61,9 +61,18 @@ exports.getUserApps = (username) => {
     }
   })
 };
-
+/***
+ *
+ * @param username
+ * @param password
+ * @param appid
+ */
 exports.login2 = (username, password, appid) => {
   return new Promise((resolve, reject) => {
+    //Tại sao lại để hàm này trong promise?
+    //Thời gian trong ví dụ này ngắn. Tuy nhiên khi truy vấn vào cơ sở dữ liệu thật trong mạng
+    //Thời gian trả về có thể lâu do đó nó có thể blocking event loop của Node.js
+    //Do đó ta phải gói nó vào trong hàm promise để kết quả trả về trong tương lai mà không buộc event loop phải dừng để chờ
     let index = _.findIndex(users, {'username': username, 'password': password});
     if (index < 0) {
       reject(new Error('Login failed'));
@@ -80,3 +89,8 @@ exports.login2 = (username, password, appid) => {
     }
   });
 };
+
+
+
+
+

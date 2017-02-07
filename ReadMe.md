@@ -11,7 +11,9 @@
 git clone https://github.com/TechMaster/demo-chai.git
 cd demo-chai
 npm install
-npm start
+npm test
 ```
 
-Look into folder test you will see the file 01_user.js that tests again db/users.js
+Look into folder test you will see:
+ 1. 01_math.js test with thrown error
+ 2. 02_user.js tests again db/users.js with promise resolve and reject outcome
