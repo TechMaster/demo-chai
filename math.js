@@ -11,9 +11,9 @@ exports.divide = (a, b) => {
     throw new Error('b is not number');
   }
 
-  if (b === 0) {
+  if (parseFloat(b) === 0) {
     throw new Error('Divide to zero');
   }
 
-  return a / b;
+  return parseFloat(a) / parseFloat(b);
 };
