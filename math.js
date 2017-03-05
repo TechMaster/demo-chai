@@ -2,18 +2,20 @@
  * Created by techmaster on 2/7/17.
  */
 exports.divide = (a, b) => {
+  let a_ = parseFloat(a);
+  let b_ = parseFloat(b);
 
-  if (isNaN(a)) {
+  if (isNaN(a_)) {
     throw new Error('a is not number');
   }
 
-  if (isNaN(b)) {
+  if (isNaN(b_)) {
     throw new Error('b is not number');
   }
 
-  if (parseFloat(b) === 0) {
+  if (b_ === 0) {
     throw new Error('Divide to zero');
   }
 
-  return parseFloat(a) / parseFloat(b);
+  return parseFloat(a_) / parseFloat(b_);
 };
