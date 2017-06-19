@@ -17,5 +17,8 @@
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
     "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
   }
 }
